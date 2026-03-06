@@ -1,0 +1,64 @@
+=========================================================
+      IMPORTANT COMMANDS FOR RASA QUOTES BOT
+=========================================================
+
+1. INSTALL PYTHON
+---------------------------------------------------------
+Before running Rasa, you need Python installed. 
+Rasa 3.x works best with Python 3.8, 3.9, or 3.10.
+- Download Python from: https://www.python.org/downloads/
+- *IMPORTANT: When installing on Windows, check the box that says "Add Python to PATH"*
+
+
+2. CREATE A VIRTUAL ENVIRONMENT (Recommended)
+---------------------------------------------------------
+It's always best to install Rasa in to a virtual environment to prevent conflicts.
+Open your terminal inside your project folder and run:
+> python -m venv venv
+
+Activate it:
+(Windows):   > venv\Scripts\activate
+(Mac/Linux): > source venv/bin/activate
+
+
+3. INSTALL RASA AND LIBRARIES
+---------------------------------------------------------
+Once your virtual environment is activated, install Rasa:
+> pip install pip --upgrade
+> pip install rasa
+
+*This project does not require any extraordinary external libraries as csv, os, and random are built into Python.*
+
+
+4. PROJECT INITIALIZATION (Only if starting from absolute zero)
+---------------------------------------------------------
+If you are strictly creating a brand new project:
+> rasa init
+
+
+5. TRAIN THE BOT
+---------------------------------------------------------
+Whenever you change intents (nlu.yml), dialogue (stories.yml/rules.yml), or the domain.yml, you need to train the AI model.
+> rasa train
+
+
+6. RUN THE CUSTOM ACTIONS SERVER
+---------------------------------------------------------
+This project uses a custom action (in actions.py) to parse quotes.csv and suggest quotes. This MUST be running in the background.
+Open a new terminal window inside your project folder and run:
+> rasa run actions
+
+
+7. RUN THE BOT - TERMINAL MODE
+---------------------------------------------------------
+If you want to quickly test the bot right from your terminal:
+> rasa shell
+
+
+8. RUN THE BOT - WEB UI API MODE
+---------------------------------------------------------
+If you want the bot to talk to the web page (index.html), you must run it as an API server so the javascript can reach it.
+Run this INSTEAD of 'rasa shell':
+> rasa run -m models --enable-api --cors "*"
+
+=========================================================
