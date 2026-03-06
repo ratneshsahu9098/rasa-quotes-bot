@@ -8,7 +8,9 @@ from rasa_sdk.executor import CollectingDispatcher
 
 # Global dictionary to hold categorized quotes
 QUOTES_DB = {}
-CSV_PATH = r"C:\Project\actions\quotes.csv"
+# Use a relative path so it works on any computer. 
+# It expects quotes.csv to be inside the actions folder, or adjust as needed.
+CSV_PATH = os.path.join(os.path.dirname(__file__), "quotes.csv")
 
 # Map rasa intents to keywords we expect in the dataset's 'category' column
 INTENT_CATEGORY_MAP = {
