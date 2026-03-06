@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: action_recommend_quote
+  - action: utter_happy
+
+- story: love path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_love
+  - action: action_recommend_quote
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: life path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_life
+  - action: action_recommend_quote
+  - action: utter_happy
+
+- story: inspiration path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_inspiration
+  - action: action_recommend_quote
+  - action: utter_happy
+
+- story: funny path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_funny
+  - action: action_recommend_quote
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: action_recommend_quote
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: action_recommend_quote
+  - action: utter_did_that_help
+  - intent: deny
+  - action: action_recommend_quote
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

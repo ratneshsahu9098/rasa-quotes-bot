@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - mood_love
+  - mood_life
+  - mood_inspiration
+  - mood_funny
+  - bot_challenge
+  - get_quote
+  - ask_creator
+
+actions:
+  - action_recommend_quote
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you feeling today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa. I can share some quotes based on your mood!"
+
+  utter_creator:
+  - text: "I was created and trained by an amazing team: RAM, RASHI, RATNA, and RATNESH!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
