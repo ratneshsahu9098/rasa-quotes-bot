@@ -3,6 +3,8 @@
 Welcome to your new custom Rasa Quote Recommendation Bot! This guide will walk you through the basic terminal commands you need to run, train, and test your bot.
 
 ---
+## 0. VERY IMPORTANT
+Read important_command.txt , this help's you a lot 
 
 ## 1. Prerequisites
 First, open your terminal and navigate to the directory where you cloned or downloaded this bot:
