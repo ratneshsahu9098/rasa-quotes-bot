@@ -9,6 +9,11 @@ Rasa 3.x works best with Python 3.8, 3.9, or 3.10.
 - Download Python from: https://www.python.org/downloads/
 - *IMPORTANT: When installing on Windows, check the box that says "Add Python to PATH"*
 
+********************************************************
+if Python version is higher then 3.10 use this command
+
+pip install -r requirements.txt
+
 
 2. CREATE A VIRTUAL ENVIRONMENT (Recommended)
 ---------------------------------------------------------
